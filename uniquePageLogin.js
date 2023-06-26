@@ -1,8 +1,10 @@
 window.addEventListener('load', function () {
     if (localStorage.getItem('web_browser') == null) {
         // Hay una ventana ya abierta
+        console.log("Ventana nueva");
         localStorage.setItem('web_browser', 'true');
         window.addEventListener('unload', function () {
+            console.log("cerrando ventana");
             localStorage.removeItem('web_browser');
         });
     } else {
@@ -18,7 +20,7 @@ window.addEventListener('load', function () {
             if (firstSubfolder.contains('.aspx')) firstSubfolder = pathComponents[0];
             errorPageUrl = '/' + firstSubfolder + '/ErrorPage.aspx'; // Ruta en otro dominio
         }
-
+        console.log(errorPageUrl);
         $.ajax({
             type: 'POST',
             url: (errorPageUrl + '/doubleSession'),
