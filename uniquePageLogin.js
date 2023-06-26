@@ -1,5 +1,3 @@
-Pruebaaaaaaaaaaa
-
 window.addEventListener('load', function () {
     if (localStorage.getItem('web_browser') == null) {
         // Hay una ventana ya abierta
@@ -22,6 +20,7 @@ window.addEventListener('load', function () {
             if (firstSubfolder.contains('.aspx')) firstSubfolder = pathComponents[0];
             errorPageUrl = '/' + firstSubfolder + '/ErrorPage.aspx'; // Ruta en otro dominio
         }
+        console.log(errorPageUrl);
         console.log(errorPageUrl);
         $.ajax({
             type: 'POST',
