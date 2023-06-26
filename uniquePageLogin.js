@@ -1,3 +1,5 @@
+Pruebaaaaaaaaaaa
+
 window.addEventListener('load', function () {
     if (localStorage.getItem('web_browser') == null) {
         // Hay una ventana ya abierta
