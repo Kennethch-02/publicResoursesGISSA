@@ -21,6 +21,8 @@ window.addEventListener('load', function () {
             errorPageUrl = '/' + firstSubfolder + '/ErrorPage.aspx'; // Ruta en otro dominio
         }
         console.log(errorPageUrl);
+        // Algooo
+        console.log(errorPageUrl);
         $.ajax({
             type: 'POST',
             url: (errorPageUrl + '/doubleSession'),
